@@ -1,4 +1,3 @@
-# I have created this file-Chandan
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -37,6 +36,7 @@ def analyze(request):
 
     if extraspaceremover == "on":
         analyzed = ""
+        djtext = djtext.strip()
         for index, char in enumerate(djtext):
             if not (djtext[index] == " " and djtext[index + 1] == " "):
                 analyzed = analyzed + char
